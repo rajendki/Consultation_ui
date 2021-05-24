@@ -1,0 +1,27 @@
+<div class="consult centered">
+<body><h1>{{@model.role}}</h1>
+{{#each @model.res as |user|}}
+<div class="flip-container centered">
+      <div class="flipper">
+         <div class="front"></div>
+         <div class="back">
+            <h1>{{user.first_name}} {{user.last_name}}</h1>
+            {{#if user.description}}
+              <p>{{user.description}}</p>
+            {{/if}}
+         <div class="font-a-icons">
+            <div class="icon-group">
+            <div class="icon-group">
+                <span class="bold">E: </span><a class="contact" href="mailto:hello@petrusrex.com" target="_top">{{user.email}}</a>
+            </div>
+            <div class="icon-group">
+                <button type="button"><a href="http://localhost:5000/meetings/new">Schedule New Meeting</a></button>
+            </div>
+         </div>
+      </div>   
+         </div>
+      </div>
+   </div>
+   {{/each}}
+</body>
+</div>
