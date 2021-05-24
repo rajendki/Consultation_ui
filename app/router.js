@@ -7,5 +7,6 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('consult');
+  this.route('consult', {path: '/consult/:role'});
+  this.route('consultationoptions');
 });
